@@ -1,0 +1,73 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #1e1e2e, #252538);
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Word Display */
+#wordDisplay {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    min-width: 180px;
+    display: inline-block;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Keyboard Layout */
+#keyboard {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Button Styles */
+button {
+    font-size: 22px;
+    padding: 15px;
+    border: none;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0px 6px 15px rgba(255, 118, 136, 0.4);
+    text-transform: uppercase;
+}
+
+/* Hover Effect */
+button:hover {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    transform: translateY(-3px);
+}
+
+/* Pressed Effect */
+button:active {
+    transform: scale(0.92);
+    box-shadow: 0px 3px 8px rgba(255, 118, 136, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    #keyboard {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    button {
+        font-size: 18px;
+        padding: 12px;
+    }
+}
