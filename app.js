@@ -35,9 +35,19 @@ function getRandomWord(letter) {
     return words[letter][Math.floor(Math.random() * words[letter].length)];
 }
 
+function speakWord(word) {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = 'en-US'; // Set language
+    speechSynthesis.speak(utterance);
+}
+
 for (let letter in words) {
     let button = document.createElement("button");
     button.textContent = letter;
-    button.onclick = () => wordDisplay.textContent = getRandomWord(letter);
+    button.onclick =  () => {
+        const word = getRandomWord(letter);
+        wordDisplay.textContent = word;
+        speakWord(word);
+    };
     keyboard.appendChild(button);
 }
